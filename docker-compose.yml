@@ -1,5 +1,6 @@
 # Copyright VMware, Inc.
 # SPDX-License-Identifier: APACHE-2.0
+# Added Duplicati backup:  Chinthaka Deshapraiya <chinthaka@ceee.dev>
 
 version: '2'
 services:
