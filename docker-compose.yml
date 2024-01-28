@@ -31,3 +31,25 @@ services:
     depends_on:
       - mariadb
 
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ}
+      - CLI_ARGS= #optional
+    volumes:
+      - ./volumes/duplicati/config:/config
+      - ./volumes/duplicati/backup:/backups
+      - suitecrm_data:/source
+      - mariadb_data:/source
+    ports:
+      - 8200:8200
+    restart: unless-stopped
+  
+volumes:
+  mariadb_data:
+    driver: local
+  suitecrm_data:
+    driver: local
