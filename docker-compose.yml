@@ -43,8 +43,7 @@ services:
     volumes:
       - ./volumes/duplicati/config:/config
       - ./volumes/duplicati/backup:/backups
-      - suitecrm_data:/source
-      - mariadb_data:/source
+      
     ports:
       - 8200:8200
     restart: unless-stopped
