@@ -9,6 +9,7 @@ services:
     environment:
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=no
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
       - MARIADB_USER=bn_suitecrm
       - MARIADB_DATABASE=bitnami_suitecrm
       - MARIADB_PASSWORD=${MARIADB_PASSWORD}
