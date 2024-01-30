@@ -20,6 +20,7 @@ services:
     image: docker.io/bitnami/suitecrm:8
     ports:
       - '8080:8080'
+      - '8443:8443'
     environment:
       - SUITECRM_DATABASE_HOST=mariadb
       - SUITECRM_DATABASE_PORT_NUMBER=3306
